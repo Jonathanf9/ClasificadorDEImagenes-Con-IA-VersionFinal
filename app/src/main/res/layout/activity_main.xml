@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/baground">
+    <!--Región líneas guía-->
+    <!--Región Líneas de guía vertical-->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/constraint_guideline_vertical_leading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/constraint_guideline_vertical_center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/constraint_guideline_vertical_trailing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95" />
+    <!--Región Final-->
+    <!--Región Horizontal-->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/constraint_guideline_horizontal_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.21" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/constraint_guideline_horizontal_center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.48" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/constraint_guideline_horizontal_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.95" />
+
+
+    <ImageView
+        android:id="@+id/resultImage"
+        android:layout_width="411dp"
+        android:layout_height="334dp"
+        android:layout_marginBottom="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/scanButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/sample" />
+
+    <TextView
+        android:id="@+id/textViewPrediction"
+        android:layout_width="415dp"
+        android:layout_height="229dp"
+        android:gravity="center"
+        android:text=" CLASIFICADOR DE IMÁGENES CON IA UTILIZANDO TENSOFLOW LITE + TEACHE MACHINE"
+        android:textAlignment="center"
+        android:textColor="@color/plomo"
+        android:textSize="16sp"
+
+        app:layout_constraintBottom_toTopOf="@+id/resultImage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/scanButton"
+        android:layout_width="154dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="16dp"
+        android:text="ESCANEAR"
+        app:icon="@android:drawable/ic_menu_gallery"
+        app:layout_constraintBottom_toTopOf="@+id/captureButton"
+        app:layout_constraintEnd_toStartOf="@+id/constraint_guideline_vertical_trailing"
+        app:layout_constraintHorizontal_bias="0.54"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/captureButton"
+        android:layout_width="154dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="28dp"
+        android:text="CÁMARA"
+        app:icon="@android:drawable/ic_menu_camera"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

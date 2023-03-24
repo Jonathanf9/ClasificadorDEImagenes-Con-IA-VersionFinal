@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    android:paddingBottom="16dp"
+    tools:context=".MainActivity"
+    android:background="@drawable/baground">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/Conexion">
+
+        <TextView
+            android:id="@+id/textViewPrediction"
+            android:layout_width="370dp"
+            android:layout_height="51dp"
+            android:text=" APARTADO DE INICIO "
+            android:textAlignment="center"
+            android:textColor="@color/plomo"
+            android:textSize="30sp" />
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:id="@+id/linearPruebaConexion">
+
+
+            <Button
+                android:id="@+id/Camara"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:onClick="onClick"
+                android:text="Cámara"
+                app:icon="@android:drawable/ic_menu_camera" />
+
+            <Button
+                android:id="@+id/info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:onClick="onClick"
+                android:text="FUNCIONAMIENTO"
+                app:icon="@android:drawable/ic_menu_help" />
+
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imageLoked"
+            android:layout_width="390dp"
+            android:layout_height="324dp"
+            android:layout_gravity="center"
+            android:src="@drawable/img" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:layout_marginBottom="30dp"
+            android:gravity="center"
+            android:text="Datos de la Carrera"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/plomo"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="201dp"
+            android:layout_marginBottom="30dp"
+            android:gravity="center"
+            android:text=" 	Carrera: Tecnología Superior en Desarrollo de Software.
+ 	Estudiante: Jonathan Ochoa.
+ 	Docente: Ing. Mario Palma.
+ 	Materia: Tendencias de la programación.
+"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="26dp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</RelativeLayout>
